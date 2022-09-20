@@ -27,6 +27,9 @@
 
 --LightGrayishBlue: hsl(240, 5%, 91%);
 }
+#one {
+    color: purple;
+}
 .answerParagraph {
     display: none;
     color: var(--DarkGrayishBlue);
@@ -39,12 +42,16 @@ body {
     min-height: 100vh;
     place-items: center;
 }
+.boldAndDarkText {
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: 700;
+}
 .cardContainer {
     background-color: white;
     box-shadow: 2px 22px 49px -5px var(--VeryDarkGrayishBlue);
     border-radius: 2rem;
     margin: 15rem 2rem 7rem;
-    max-width: 32.7rem;
+    width: 32.7rem;
     
 }
 h1 {
@@ -60,6 +67,9 @@ hr {
 hr:last-child {
     margin-bottom: 0;
 }
+.invertIcon {
+    transform: rotate(180deg);
+}
 .mainQuestionAndAnswerContainer {
     margin-bottom: 5rem;
     padding-inline: 3rem;
@@ -69,6 +79,9 @@ hr:last-child {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
+}
+.show {
+    display: block;
 }
 .unopenedQuestionParagraph {
     color: var(--VeryDarkGrayishBlue);
