@@ -33,6 +33,8 @@
 .answerParagraph {
     display: none;
     color: var(--DarkGrayishBlue);
+    margin-bottom: 1.5rem;
+    transition: display 2s;
 }
 
 body {
@@ -47,12 +49,15 @@ body {
     font-weight: 700;
 }
 .cardContainer {
+    align-items: center;
     background-color: white;
     box-shadow: 2px 22px 49px -5px var(--VeryDarkGrayishBlue);
     border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
     margin: 15rem 2rem 7rem;
-    width: 32.7rem;
     
+    width: 32.7rem;
 }
 h1 {
     font-size: 2.7rem;
@@ -62,23 +67,33 @@ h1 {
 hr {
     background-color: var(--LightGrayishBlue);
     border: .3px solid var(--LightGrayishBlue);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 hr:last-child {
     margin-bottom: 0;
+}
+.illustrationBoxDesktop {
+    display: none;
 }
 .invertIcon {
     transform: rotate(180deg);
 }
 .mainQuestionAndAnswerContainer {
-    margin-bottom: 5rem;
-    padding-inline: 3rem;
+    /* margin-bottom: 5rem;
+    margin-inline: 3rem; */
+    width: 80%;
 }
 .questionAndArrowContainer {
     align-items: center;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    transition-property: color;
+    transition-delay: .1s;
+}
+.questionAndArrowContainer:hover {
+    color: var(--SoftRed);
 }
 .show {
     display: block;
@@ -90,10 +105,55 @@ hr:last-child {
 .womanOnlineContainer {
     display: flex;
     justify-content: center;
-    margin-bottom: 5rem;
-    margin-top: -11.2rem;
+    margin: -11.2rem 0 5rem 0 ;
 }
-.womanOnlineImage {
+.womanOnlineDesktopImage {
+    display: none;
+}
+.womanOnlineMobileImage {
     filter: drop-shadow(0px 30px 0px #f1f0fc);
     width: 80%;
+}
+.margin {
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 969px) {
+    .cardContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 92rem;
+    }
+    h1 {
+        text-align: left;
+    }
+    .illustrationBoxDesktop {
+        display: block;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        margin-right: 10rem;
+        margin-top: 14rem;
+    }
+    .mainQuestionAndAnswerContainer {
+        margin: 6rem 10rem 8rem 5rem;
+        width: 30%;
+    }
+    .womanOnlineContainer {
+        display: grid;
+        margin: 0 0 0 -9rem ;
+        width: 50%;
+    }
+    .womanOnlineDesktopImage {
+        display: block;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+    .womanOnlineMobileImage {
+        display: none;
+    }
+    
 }
