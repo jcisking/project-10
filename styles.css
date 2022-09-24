@@ -33,8 +33,7 @@ font-size: 62.5%;
     color: var(--DarkGrayishBlue);
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    transition-property: display;
-    transition-delay: 1s;
+    transition: display 4s
 }
 .arrowIcon {
     transition: transform .5s;
