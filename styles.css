@@ -29,11 +29,15 @@ font-size: 62.5%;
 }
 
 .answerParagraph {
-    display: none;
+    /* display: none; */
     color: var(--DarkGrayishBlue);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-    transition: display 4s
+    position: absolute;
+    top: 2rem
+    /* margin-bottom: 1.5rem; */
+    /* position: absolute; */
+    
+    
 }
 .arrowIcon {
     transition: transform .5s;
@@ -49,6 +53,9 @@ body {
 .boldAndDarkText {
     color: var(--VeryDarkDesaturatedBlue);
     font-weight: 700;
+}
+.btnAndAnswerContainer {
+    position: relative;
 }
 .cardContainer {
     align-items: center;
@@ -96,7 +103,7 @@ hr:last-child {
 }
 .show {
     display: block;
-    transition: display 4s;
+    
 }
 .unopenedQuestionParagraph {
     color: var(--VeryDarkGrayishBlue);
@@ -116,8 +123,20 @@ hr:last-child {
     width: 80%;
 }
 .margin {
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
 }
+
+/* @keyframes poop {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+} */
+
 
 /* Media Queries */
 
