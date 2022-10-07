@@ -29,9 +29,9 @@ font-size: 62.5%;
 }
 
 .answerParagraph {
-    /* display: none; */
     color: var(--DarkGrayishBlue);
     line-height: 1.6;
+    pointer-events: none;
     position: absolute;
     top: 2.5rem; 
     opacity: 0;
@@ -47,10 +47,6 @@ body {
     font-size: 1.2rem;
     min-height: 100vh;
     place-items: center;
-}
-.boldAndDarkText {
-    color: var(--VeryDarkDesaturatedBlue);
-    font-weight: 700;
 }
 .btnAndAnswerContainer {
     position: relative;
@@ -81,9 +77,6 @@ hr:last-child {
 .illustrationBoxDesktop {
     display: none;
 }
-.invertIcon {
-    transform: rotate(180deg);
-}
 .mainQuestionAndAnswerContainer {
     margin-bottom: 4rem;
     width: 85%;
@@ -103,14 +96,35 @@ hr:last-child {
 .questionAndArrowContainer:hover {
     color: var(--SoftRed);
 }
-/* [data-show] {
-    background-color: black;
+.womanOnlineContainer {
+    display: flex;
+    justify-content: center;
     
-} */
+}
+.womanOnlineDesktopImage {
+    display: none;
+}
+.womanOnlineMobileImage {
+    filter: drop-shadow(0px 30px 0px #f1f0fc);
+    margin: -11.2rem 0 5rem 0 ;
+    width: 80%;
+}
+
+/* JavaScript Stuff */
+
 [data-show] .answerParagraph {
     opacity: 1;
+    pointer-events: auto;
     transition: opacity 1s;
 } 
+[data-show] .arrowIcon {
+    transform: rotate(180deg);
+}
+[data-show] .questionParagraph {
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: 700;
+
+}
 [data-show] #btn1 {
     margin-bottom: 8rem ;
 }
@@ -126,34 +140,6 @@ hr:last-child {
 [data-show] #btn5 {
     margin-bottom: 6.5rem ;
 }
-.unopenedQuestionParagraph {
-    color: var(--VeryDarkGrayishBlue);
-    
-}
-.womanOnlineContainer {
-    display: flex;
-    justify-content: center;
-    
-}
-.womanOnlineDesktopImage {
-    display: none;
-}
-.womanOnlineMobileImage {
-    filter: drop-shadow(0px 30px 0px #f1f0fc);
-    margin: -11.2rem 0 5rem 0 ;
-    width: 80%;
-}
-
-/* @keyframes poop {
-    0% {
-        opacity: 0;
-        
-    }
-    100% {
-        opacity: 1;
-        
-    }
-} */
 
 
 /* Media Queries */
@@ -204,6 +190,24 @@ hr:last-child {
     }
     .womanOnlineMobileImage {
         display: none;
+    }
+
+    /* JavaScript Stuff */
+
+    [data-show] #btn1 {
+        margin-bottom: 5.5rem ;
+    }
+    [data-show] #btn2 {
+        margin-bottom: 5.5rem ;
+    }
+    [data-show] #btn3 {
+        margin-bottom: 7rem ;
+    }
+    [data-show] #btn4 {
+        margin-bottom: 5.7rem ;
+    }
+    [data-show] #btn5 {
+        margin-bottom: 5.7rem ;
     }
     
 }
